@@ -72,30 +72,6 @@ pip install requests beautifulsoup4 PyPDF2
 - Downloaded files and JSON records are saved in the corresponding output folders.
 - A `summary.json` file contains all records for easy review.
 
-## 🌐 Target Websites
-
-The scripts are pre-configured to crawl the following sources (as per assignment):
-
-- https://sanskritdocuments.org/scannedbooks/asisanskritpdfs.html
-- https://sanskritdocuments.org/scannedbooks/asiallpdfs.html
-- https://indianculture.gov.in/ebooks
-- https://ignca.gov.in/divisionss/asi-books/
-- https://archive.org/details/TFIC_ASI_Books/ACatalogueOfTheSamskritManuscriptsInTheAdyarLibraryPt.1/
-- https://indianmanuscripts.com/
-- https://niimh.nic.in/ebooks/ayuhandbook/index.php
-
-You can edit the `sites` list in either script to add or remove sources.
-
-## 🧪 Test Cases
-
-| Test Case                  | Input/Action                                | Expected Outcome                                      |
-|----------------------------|---------------------------------------------|-------------------------------------------------------|
-| TC1: Crawl Basic Page      | Run crawler on a sample site                | HTML saved, PDF links identified and downloaded       |
-| TC2: Metadata JSON         | Process a sample PDF                        | JSON record with all required fields, correct formats |
-| TC3: OCR Extraction        | (Future: for scanned PDFs)                  | `content` field contains OCR-extracted text           |
-| TC4: Checksum & Delta      | Modify and re-run                           | Script flags changed file, re-processes it            |
-| TC5: JSON Schema Validation| Validate JSON output                        | All records pass schema validation                    |
-
 ## 🛠️ Notes & Best Practices
 
 - **Polite crawling:** 1.5–2 second delay between downloads to respect server load.
